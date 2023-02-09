@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        label:
+
+        main:
         while (true) {
             System.out.println("\n======= Selamat Datang Enigmanians =======");
             System.out.println("Silahkan Pilih Menu :");
@@ -18,15 +19,19 @@ public class Main {
             System.out.print("\nPilihan Anda : ");
             String userInput = in.nextLine();
 
-            switch (userInput) {
-                case "1" -> DailySchedule.main(in);
-                case "2" -> SchoolReport.main(in);
-                case "3" -> AttackZombie.main(in);
-                case "4" -> OddEven.main(in);
-                case "5" -> {
-                    return;
+            try {
+                switch (userInput) {
+                    case "1" -> DailySchedule.main(in);
+                    case "2" -> SchoolReport.main(in);
+                    case "3" -> AttackZombie.main(in);
+                    case "4" -> OddEven.main(in);
+                    case "5" -> {
+                        break main;
+                    }
+                    default -> System.out.println("Masukan tidak valid, mohon dicoba kembali!!");
                 }
-                default -> System.out.println("Input invalid, please try again!");
+            } catch (Exception e) {
+                System.out.println("Masukan tidak valid!");
             }
         }
     }

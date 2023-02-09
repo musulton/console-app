@@ -25,7 +25,7 @@ public class AttackZombie {
         if (input.length() != 2) {
             attack(input);
         } else {
-            System.out.println("Invalid Number!");
+            System.out.println("Angka tidak valid!");
         }
     }
 }
