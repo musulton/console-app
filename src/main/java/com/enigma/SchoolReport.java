@@ -22,13 +22,13 @@ public class SchoolReport {
         System.out.println("=== Raport Nilai Sekolah ===");
         System.out.println("Input : ");
         System.out.print("TUGAS = ");
-        int tugas = in.nextInt();
+        int tugas = Integer.parseInt(in.nextLine());
 
         System.out.print("UTS = ");
-        int uts = in.nextInt();
+        int uts = Integer.parseInt(in.nextLine());
 
         System.out.print("UAS = ");
-        int uas = in.nextInt();
+        int uas = Integer.parseInt(in.nextLine());
 
         int score = (tugas + uts + uas) / 3;
         String grade = getGrade(score);

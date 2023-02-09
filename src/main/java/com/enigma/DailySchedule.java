@@ -6,7 +6,7 @@ public class DailySchedule {
     static void main(Scanner in) {
         System.out.println("=== Jadwal Harian ===");
         System.out.print("Input : ");
-        int input = in.nextInt();
+        int input = Integer.parseInt(in.nextLine());
 
         switch (input) {
             case 4, 5 -> System.out.println("Bangun Pagi");

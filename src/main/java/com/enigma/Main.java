@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        main:
         while (true) {
             System.out.println("\n======= Selamat Datang Enigmanians =======");
             System.out.println("Silahkan Pilih Menu :");
@@ -26,7 +25,7 @@ public class Main {
                     case "3" -> AttackZombie.main(in);
                     case "4" -> OddEven.main(in);
                     case "5" -> {
-                        break main;
+                        System.exit(0);
                     }
                     default -> System.out.println("Masukan tidak valid, mohon dicoba kembali!!");
                 }

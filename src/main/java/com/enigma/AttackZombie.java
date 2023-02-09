@@ -22,7 +22,7 @@ public class AttackZombie {
         System.out.print("Input : ");
         String input = in.nextLine();
 
-        if (input.length() != 2) {
+        if (input.length() == 2) {
             attack(input);
         } else {
             System.out.println("Angka tidak valid!");
